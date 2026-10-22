@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /* Official KBZLIFE Brand Theme */
+    --kbz-brand-blue: #176B98;
+    --kbz-sky-blue: #25A9D2;
+    --kbz-bg-base: #F3F8FB;
+    --kbz-grey-accent: #737373;
+
+    /* Semantic Theme Aliases */
+    --kbz-blue-primary: #176B98;
+    --kbz-blue-secondary: #135A80;
+    --kbz-blue-accent: #25A9D2;
+    --kbz-blue-pale: #F3F8FB;
+    --kbz-navy-dark: #0F3E57;
+    --kbz-border-subtle: #E2E8F0;
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: #F3F8FB;
+    color: #1E293B;
+    font-family: 'Manrope', 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    overflow-x: hidden;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  body {
+    background-color: #F3F8FB;
+    overflow-x: hidden;
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  #root {
+    max-width: 100%;
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Myanmar font support */
+  .font-myanmar {
+    font-family: 'Noto Sans Myanmar', 'Manrope', 'Plus Jakarta Sans', sans-serif;
+  }
+
+  /* Visible focus ring for accessibility */
+  *:focus-visible {
+    outline: 2px solid #176B98;
+    outline-offset: 2px;
+  }
+}
+
+/* Light minimalist pattern backdrop styles based on #F3F8FB */
+.bg-light-blue-pattern {
+  background-color: #F3F8FB;
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(37, 169, 210, 0.06) 0%, transparent 60%),
+    linear-gradient(to right, rgba(23, 107, 152, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(23, 107, 152, 0.04) 1px, transparent 1px);
+  background-size: 100% 100%, 28px 28px, 28px 28px;
+}
+
+.bg-light-blue-dots {
+  background-color: #F3F8FB;
+  background-image: 
+    radial-gradient(circle at 100% 50%, rgba(37, 169, 210, 0.05) 0%, transparent 50%),
+    radial-gradient(rgba(23, 107, 152, 0.06) 1.25px, transparent 1.25px);
+  background-size: 100% 100%, 24px 24px;
+}
+
+.bg-light-blue-subtle {
+  background-color: #F3F8FB;
+  background-image: 
+    radial-gradient(rgba(23, 107, 152, 0.045) 1.2px, transparent 1.2px);
+  background-size: 26px 26px;
+}
+
+.bg-ambient-luminous {
+  background-color: #F3F8FB;
+  background-image: 
+    radial-gradient(120% 90% at 50% 0%, #EBF3F8 0%, #F0F6FA 45%, #F3F8FB 100%),
+    linear-gradient(to right, rgba(23, 107, 152, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(23, 107, 152, 0.04) 1px, transparent 1px);
+  background-size: 100% 100%, 28px 28px, 28px 28px;
+}
+
+.bg-ambient-glow {
+  background: radial-gradient(circle at 50% 20%, rgba(37, 169, 210, 0.08) 0%, rgba(23, 107, 152, 0.04) 50%, transparent 80%);
+}
+
+.shadow-card-elevated {
+  box-shadow: 0 4px 20px -2px rgba(23, 107, 152, 0.06), 0 2px 6px -1px rgba(23, 107, 152, 0.03);
+}
+
+.shadow-card-hover {
+  box-shadow: 0 16px 36px -4px rgba(23, 107, 152, 0.09), 0 4px 12px -2px rgba(23, 107, 152, 0.04);
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
